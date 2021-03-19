@@ -35,7 +35,7 @@ void* proc2(void* array2) {
         sem_wait(&semaphoreID); // вход в критический участок 
         for (int i = 0; i < strlen(array); i++){
             cout << array[i] << flush;
-            sleep(1)
+            sleep(1);
         }
         cout << endl;
         sem_post(&semaphoreID); // выход из критического участка
