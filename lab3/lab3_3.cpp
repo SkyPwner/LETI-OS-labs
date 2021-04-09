@@ -52,7 +52,7 @@ int main(){
 
     pipe(field); // Создание канала
     fcntl(field[0], F_SETFL, O_NONBLOCK);
-	fcntl(field[1], F_SETFL, O_NONBLOCK);
+    fcntl(field[1], F_SETFL, O_NONBLOCK);
 
     pthread_create (&id1 , NULL , proc1 , NULL); // Создание потоков
     pthread_create (&id2 , NULL , proc2 , NULL); 
